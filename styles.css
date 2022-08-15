@@ -27,6 +27,7 @@ header a{
   border-radius: 30px;
   margin: 1em;
   padding: .5em 1em;
+  font-weight: bold;
 }
 
 .contenedor {
@@ -59,31 +60,42 @@ header a{
 
 /*Dark mode styles*/
 
-body.darkMode 
+.darkMode 
 {
   background-color: rgb(39, 39, 39);
+  color: white;
 }
 
-header.darkMode{ 
+.darkMode header{
+  background-color: black;
+  color: white;
+}
+
+.darkMode header a{
+  background-color: white;
+  color: black;
+  font-weight: bold;
+}
+
+.darkMode h1{ 
   background-color: rgb(19, 19, 19);
   color: white;
   border-color: black;
 }
 
-header.darkMode a{
-  background-color: white;
-  color: black;
-}
-
-.item.darkMode{
+.darkMode .item{
   background-color: rgb(19, 19, 19);
-  border-color: black;
+  color: white;
+  border: 1px solid black;
 }
 
-.item h2.darkMode{
-  color: rgb(230, 230, 230);
+.darkMode p{
+  background-color: rgb(19, 19, 19);
+  color: white;
 }
 
-.item p.darkMode{
-  color: rgb(230, 230, 230);
+.darkMode h2{
+  background-color: rgb(19, 19, 19);
+  color: white;
 }
+
