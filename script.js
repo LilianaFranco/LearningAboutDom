@@ -14,3 +14,22 @@ while (posts.length>0){
 
 console.log(posts)
 
+function createPost(imagen, titulo, parrafo){
+        const postTemplate = `
+                <div class="item">
+                <img src="${imagen}">
+                <h2>${titulo}</h2>
+                <p>${parrafo}</p>
+                </div>
+        `;
+        console.log(document.querySelector(".contenedor"))
+        document.querySelector(".contenedor").innerHTML += postTemplate;
+        console.log(document.querySelector(".contenedor"))
+}
+
+createPost("url", "Titulo", "Parrafo")
+
+
+
+
+
