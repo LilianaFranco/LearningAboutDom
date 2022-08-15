@@ -5,16 +5,15 @@ if (seeDark) {
 }
 
 let posts = document.getElementsByClassName("item");
-let infoPost = document.getElementsByClassName("contenedor").innerHTML
+let savedPosts = posts;
 console.log(posts)
 console.log(posts[0])
 
+// while (posts.length>0){
+//         posts[0].remove();
+// }
 
-while (posts.length>0){
-        posts[0].remove();
-}
-
-console.log(infoPost)
+console.log(savedPosts)
 
 function createPost(imagen, titulo, parrafo){
         const postTemplate = `
@@ -27,9 +26,20 @@ function createPost(imagen, titulo, parrafo){
         document.querySelector(".contenedor").innerHTML += postTemplate;
 }
 
-createPost("url", "Titulo", "Parrafo")
+console.log(savedPosts)
 
 
+//prueba
+let imagenURL = savedPosts[0].firstElementChild.getAttribute("src")
+let titulo = savedPosts[0].querySelector("h2").innerText
+let parrafo = savedPosts[0].querySelector("p").innerText
+createPost(imagenURL, titulo, parrafo)
 
+//Si uso este for se crea dinámicamente y se crea un loop infinito.
 
-
+// for (let i = 0; i < savedPosts.length; i++) {
+//         let imagenURL = savedPosts[i].firstElementChild.getAttribute("src")
+//         let titulo = savedPosts[i].querySelector("h2").innerText
+//         let parrafo = savedPosts[i].querySelector("p").innerText
+//         createPost(imagenURL, titulo, parrafo)
+// }
