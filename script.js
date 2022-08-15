@@ -5,14 +5,16 @@ if (seeDark) {
 }
 
 let posts = document.getElementsByClassName("item");
+let infoPost = document.getElementsByClassName("contenedor").innerHTML
 console.log(posts)
 console.log(posts[0])
+
 
 while (posts.length>0){
         posts[0].remove();
 }
 
-console.log(posts)
+console.log(infoPost)
 
 function createPost(imagen, titulo, parrafo){
         const postTemplate = `
@@ -22,9 +24,7 @@ function createPost(imagen, titulo, parrafo){
                 <p>${parrafo}</p>
                 </div>
         `;
-        console.log(document.querySelector(".contenedor"))
         document.querySelector(".contenedor").innerHTML += postTemplate;
-        console.log(document.querySelector(".contenedor"))
 }
 
 createPost("url", "Titulo", "Parrafo")
