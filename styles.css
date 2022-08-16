@@ -30,6 +30,14 @@ header a{
   font-weight: bold;
 }
 
+header a:visited, header a:hover {
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
 .contenedor {
   display: flex;
   flex-wrap: wrap;

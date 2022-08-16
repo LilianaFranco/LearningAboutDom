@@ -1,8 +1,9 @@
-let seeDark = confirm("¿Deseas ver esta página en modo oscuro?")
+const goDark = document.getElementById("boton-dark")
+console.log(goDark);
 
-if (seeDark) {
-        document.querySelector('body').classList.add('darkMode')   
-}
+goDark.addEventListener("click", function (){
+        document.querySelector('body').classList.toggle("darkMode") 
+})
 
 let posts = document.getElementsByClassName("item");
 let savedPosts = posts;
